@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online FoodShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="wrap">
+        <div id="container">
+            <video src="restaurant_food.mp4" autoplay muted loop></video>
+            <img src="restaurant.jpg" alt="restaurant">
+            <div id="head">
+                <h1>Online FoodShop</h1>
+        
+                <nav id="nav_parent">
+                    <ul id="navbar">
+                        <li><a href="index.html" class="navigation">Home</a></li>
+                        <li><a href="#" class="navigation">About</a></li>
+                        <li><a href="#" class="navigation">Menu</a></li>
+                        <li><a href="ContactUs.html" class="navigation" target="_self">ContactUs</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <h3>Welcome to Online FoodShop</h3>
+            <div id="btn">
+                <input type="button" value="Order Now"><br>
+                <input type="button" value="Prices"><br>
+                <input type="button" value="Specials"><br>
+                <input type="button" value="Setting"><br>
+            </div>
+            <div id="intro"><p><i>Experience</i> <br>the <small>best dining</small> with our<br> <i>Exquisite</i> dishes...</p></div>
+        </div>
+    </section>
+
+    <script>
+        let nav=document.getElementById('nav_parent');
+
+        nav.addEventListener('click',()=>{
+            nav.classList.toggle('clicked');
+        })
+
+
+    </script>
+</body>
+</html>

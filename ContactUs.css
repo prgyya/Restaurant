@@ -1,0 +1,154 @@
+:root{
+    --color:rgb(82, 26, 4);
+}
+body{
+    margin:0;
+    padding:0;
+    background: url(restaurant.jpg);
+}
+#variable{
+    height:100vh;
+}
+#variable::before{
+    content:'';
+    background-color: rgba(91, 54, 28, 0.238);
+    inset:0;
+    position:absolute;
+    z-index: -30;
+}
+section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+#main_wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-items: center;
+    color:white;
+    border:8px double white;
+    border-radius: 0rem 10rem 4rem 0.6rem;
+    flex-wrap: wrap;
+    width:fit-content;
+}
+input[placeholder],select{
+    width:25rem;
+    height:2.3rem;
+    padding:0 10px 0 10px;
+}
+select{
+    width:26rem;
+}
+input,select,textarea{
+    border-radius:2rem;
+    border:1px double rgb(82, 26, 4);
+    color:var(--color);
+}
+textarea{
+    padding:15px 15px 0 15px;
+}
+#submit,#reset{
+    padding:10px;
+    margin:0 10px 0 10px;
+}
+#submit:hover,
+#reset:hover{
+    background-color: rgb(212, 113, 80);
+    color:rgb(63, 22, 12);
+    border-color: chocolate;
+}
+#myform{
+    display: flex;
+}
+#first_half,
+#second_half{
+    padding:10px 2rem 0 2rem;
+}
+#first_half{
+    border-right:3px double white;
+    margin-bottom:20px;
+    order:1;
+}
+#second_half{
+    border-left:3px double white;
+    margin-bottom:20px;
+    order:3;
+}
+#third_half{
+    padding-left:2rem;
+    margin-top:1rem;
+    order:2;
+}
+#first_half:hover{
+    background-color: rgba(210, 112, 59, 0.881);
+    border-radius: 2rem;
+    transition :background-color 1s ease-in-out,border-radius 1s ease-in-out;
+}
+#second_half:hover{
+    background-color: rgba(210, 112, 59, 0.881);
+    border-radius: 2rem 8rem 4rem 2rem;
+    transition :background-color 1s ease-in-out,border-radius 1s ease-in-out;
+    margin-bottom: 15px;
+}
+#error_display{
+    position:absolute;
+    width:20rem;
+    height:4rem;
+    border-radius:1rem;
+    background-color: white;
+    color:red;
+    text-align: center;
+    padding-top:5px;
+}
+h1{
+    border-bottom:2px solid white;
+}
+@media screen and (max-width:1004px) and (min-width:545px){
+   #myform{
+    display:flex;
+    flex-direction:column;
+   }
+   #first_half{
+    order:1;
+    border-right:none;
+   }
+   #second_half{
+    order:2;
+    border-left:none;
+   }
+   #third_half{
+    order:3;
+    position:absolute;
+    top:57rem;
+   }
+}
+@media screen and (max-width:545px) and (min-width:60px){
+    #myform{
+    display:flex;
+    flex-direction:column;
+   }
+   #main_wrapper{
+    height:fit-content;
+    width:80%;
+    word-wrap: wrap;
+    border:none;
+   }
+   #third_half{
+    order:3;
+    position:absolute;
+    top:55rem;
+   }
+   input[placeholder],select{
+       width:20rem;
+       height:2.3rem;
+       padding:0 10px 0 10px;
+    }
+    select{
+        width:21rem;
+    }
+    textarea{
+      width:77%;
+   }
+}
